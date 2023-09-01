@@ -6,5 +6,5 @@
 <h1 align ="center">Olive Farm</h1>
 
 
-# Olive_Farm
+# Olive Farm Open Instruct
 A framework for generating instructions data. Develop your own domain knowledge instructions set with human seed data.
