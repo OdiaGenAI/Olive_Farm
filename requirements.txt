@@ -1,0 +1,6 @@
+streamlit
+pdfplumber
+docx2txt
+justext
+openai
+langchain
