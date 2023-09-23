@@ -13,7 +13,7 @@ import json
 from custom_prompt_template import InstructionGenerationTemplate, AnswerGenerationTemplate
 
 
-st.set_page_config(page_title="LLM instruction")
+st.set_page_config(page_title="LLM instruction Generator")
 
 st.sidebar.success("Select a page above")
 
