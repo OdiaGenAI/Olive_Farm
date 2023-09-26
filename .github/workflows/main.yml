@@ -15,5 +15,5 @@ jobs:
         github_repo_id: OdiaGenAI/Olive_Farm
         huggingface_repo_id: OdiaGenAI/Olive_Farm
         repo_type: space
-        space_sdk: docker
+        space_sdk: streamlit
         hf_token: ${{ secrets.HF_TOKEN }}
