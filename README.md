@@ -3,7 +3,7 @@
 </p>
 
 
-<h1 align ="center">Olive Farm</h1>
+<h1 align ="center">OliveFarm</h1>
 
 
 # OliveFarm 
@@ -30,6 +30,7 @@ Citation:
 
 If you find this repository useful, please consider giving ⭐ and citing:
 
+```
 @misc{Olivefarm,
   author = {AR Kamaldeen and SK Shahid and Sambit Sekhar and Shantipriya Parida},
   title = {Olivefarm: WebAPP for Indic Instruction Set Generation},
@@ -38,4 +39,15 @@ If you find this repository useful, please consider giving ⭐ and citing:
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/shantipriyap/OdiaGenAI}},
 }
+```
+## License
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
