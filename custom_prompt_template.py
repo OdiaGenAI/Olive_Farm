@@ -1,5 +1,5 @@
 from typing import List
-# import langchain
+import langchain
 from langchain.prompts import PromptTemplate
 class InstructionGenerationTemplate(PromptTemplate):
     """A custom prompt template for generating instructions."""
