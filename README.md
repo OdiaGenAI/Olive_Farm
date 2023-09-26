@@ -18,10 +18,10 @@ Additionally, OliveFarm features a collection of pre-existing templates, powered
 
 Contributors:
 
-AR Kamaldeen (KIIT University, India)
-SK Shahid (Silicon Institute of Technology, India)
-Sambit Sekhar (Odia Generative AI, India)
-Dr. Shantipriya Parida (Silo AI, Finland)     
+* AR Kamaldeen (KIIT University, India)
+* SK Shahid (Silicon Institute of Technology, India)
+* Sambit Sekhar (Odia Generative AI, India)
+* Dr. Shantipriya Parida (Silo AI, Finland)     
 
 
 Citation:
