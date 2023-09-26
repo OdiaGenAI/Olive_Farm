@@ -3,12 +3,12 @@
 </p>
 
 
-<h1 align ="center">OliveFarm</h1>
+<h1 align ="center">Olive Farm</h1>
 
 
-# OliveFarm 
+# Olive Farm 
 
-OliveFarm is a cutting-edge web application crafted by the innovative minds at OdiaGenAI. It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages. Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate additional languages on the horizon.
+Olive Farm is a cutting-edge web application crafted by the innovative minds at OdiaGenAI. It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages. Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate additional languages on the horizon.
 
 This versatile tool accommodates inputs from a variety of sources, including:
 * URLs,
@@ -33,7 +33,7 @@ If you find this repository useful, please consider giving ⭐ and citing:
 ```
 @misc{Olivefarm,
   author = {AR Kamaldeen and SK Shahid and Sambit Sekhar and Shantipriya Parida},
-  title = {Olivefarm: WebAPP for Indic Instruction Set Generation},
+  title = {Olive Farm: WebAPP for Indic Instruction Set Generation},
   year = {2023},
   publisher = {GitHub},
   journal = {GitHub repository},
