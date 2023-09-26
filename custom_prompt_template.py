@@ -1,6 +1,7 @@
 from typing import List
-import langchain
-class InstructionGenerationTemplate(langchain.prompts.PromptTemplate):
+# import langchain
+from langchain.prompts import PromptTemplate
+class InstructionGenerationTemplate(PromptTemplate):
     """A custom prompt template for generating instructions."""
     
     input_variables: List[str] = ["num_questions", "context", "instruction_format", "lang", "additional_rules"]
