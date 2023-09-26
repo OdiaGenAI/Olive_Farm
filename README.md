@@ -6,8 +6,6 @@
 <h1 align ="center">Olive Farm</h1>
 
 
-# Olive Farm 
-
 Olive Farm is a cutting-edge web application crafted by the innovative minds at OdiaGenAI. It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages. Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate additional languages on the horizon.
 
 This versatile tool accommodates inputs from a variety of sources, including:
