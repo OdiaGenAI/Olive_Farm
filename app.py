@@ -15,8 +15,73 @@ from custom_prompt_template import InstructionGenerationTemplate, AnswerGenerati
 
 st.set_page_config(page_title="LLM instruction Generator")
 
-st.sidebar.success("Select a page above")
 
+# sidebar content
+with st.sidebar:
+    st.markdown("""
+    <style>
+    [data-testid=stImage]{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;  
+        padding-bottom: 40px;
+    }            
+    </style>
+    """, unsafe_allow_html=True)
+    st.image(image="olive_farm.png", width=100)
+
+    st.markdown("""
+    <style>
+    [data-testid=stMarkdownContainer]{
+        text-align: justify;
+        
+    }
+    </style>    
+    """, unsafe_allow_html=True)
+    st.markdown("""OliveFarm is a cutting-edge web application crafted by the innovative minds at OdiaGenAI.
+    It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages.
+    Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate additional
+    languages on the horizon.""")
+    st.markdown('''
+    <style>
+    [data-testid="stMarkdownContainer"] ul{
+        padding-left:40px;
+    }
+    </style>
+    ''', unsafe_allow_html=True)
+    st.markdown(
+    """
+    This versatile tool accommodates inputs from a variety of sources, including:
+    - URLs,
+    - PDF documents,
+    - Plain text.
+    """
+    )
+    st.markdown("""
+    Additionally, OliveFarm features a collection of pre-existing templates, powered by ChatGPT,
+        to streamline the process of generating instruction sets. Experience the future of Indic 
+    language instruction with OliveFarm!
+
+    Contributors:
+    - AR Kamaldeen (KIIT University, India)
+    - SK Shahid (Silicon Institute of Technology, India)
+    - Sambit Sekhar (Odia Generative AI, India)
+    - Dr. Shantipriya Parida (Silo AI, Finland)  
+        
+    """)
+    st.write("#")
+    st.markdown(
+    """
+    <style>
+    .center-text {
+        text-align: center;
+    }
+    </style>
+    <div class="center-text">
+        © 2023 Odia Generative AI
+    </div>
+    """
+    , unsafe_allow_html=True)
 
 # function for the odia stoplists justext
 def odia_stoplist():
