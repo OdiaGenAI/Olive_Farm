@@ -413,7 +413,7 @@ def main():
 
                      # providing the rules for the answers to be generated
                     additional_rules = """
-                        provide only the answers as paragraphs by numbering it accordingly without providing questions and additional tags
+                        Each generated answer should be within the <ans>Answer</ans> tag and the question should be within the <ques>Question</ques> tag.
                     """
                    
                     question =  st.session_state["selected_items"]
@@ -442,12 +442,15 @@ def main():
                                 print("\n\n\n\n\nAnswerss before regex\n\n\n\n")
                                 print(content)
                                 # print("Answer Type:" + str(type(content)))
-                                responses_list = content.split('\n')
+                                # responses_list = content.split('\n')
                                 # print("\n\n\n\n\nAnswerss before regex after splitting\n\n\n\n")
                                 # print(responses_list)
                                 # print("Answer Type:" + str(type(responses_list)))
 
-                                responses_list = [re.sub(r'^\s*\d+\.\s*', '', resp) for resp in responses_list if resp]
+                                # responses_list = [re.sub(r'^\s*\d+\.\s*', '', resp) for resp in responses_list if resp]
+                                responses_list = re.findall(r'<ans>(.*?)</ans>', content, re.DOTALL)
+
+                                
                                 st.session_state["answers"]=responses_list
                                 st.session_state.answered = True
                             st.session_state.Initial2 = False
