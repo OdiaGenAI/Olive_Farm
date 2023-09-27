@@ -22,57 +22,62 @@ with st.sidebar:
     <style>
     [data-testid=stImage]{
         display: block;
+        margin-top: -20px;
         margin-left: auto;
         margin-right: auto;  
-        padding-bottom: 40px;
     }            
     </style>
     """, unsafe_allow_html=True)
     st.image(image="olive_farm.png", width=100)
 
     st.markdown("""
-    <style>
-    [data-testid=stMarkdownContainer]{
-        text-align: justify;
-        
-    }
-    </style>    
+        <style>
+            .sidebar-text {
+                text-align: justify;
+                font-size: 14px;
+                padding-bottom: 16px;
+            }
+            .list {
+                font-size: 14px !important;
+            }
+           
+        </style>
+        <div class="sidebar-text">
+            OliveFarm is a cutting-edge web application crafted by the innovative minds at OdiaGenAI. 
+            It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages. 
+            Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate 
+            additional languages on the horizon.
+        </div>
+        <div class="sidebar-text">
+            This versatile tool accommodates inputs from a variety of sources, including (URLs, PDF documents, and plain text).         
+        </div>
+        <div class="sidebar-text">
+            Additionally, OliveFarm features a collection of pre-existing templates, powered by ChatGPT, 
+            to streamline the process of generating instruction sets. Experience the future of 
+            Indic language instruction with OliveFarm!
+        </div>
+        <div class="sidebar-text">
+            Contributors:
+        </div>
+        <ul>
+            <li class="list">AR Kamaldeen</li>
+            <li class="list">SK Shahid</li>
+            <li class="list">Sambit Sekhar</li>
+            <li class="list">Dr. Shantipriya Parida</li>
+        </ul>
     """, unsafe_allow_html=True)
-    st.markdown("""OliveFarm is a cutting-edge web application crafted by the innovative minds at OdiaGenAI.
-    It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages.
-    Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate additional
-    languages on the horizon.""")
-    st.markdown(
-    """
-    This versatile tool accommodates inputs from a variety of sources, including:
-    - URLs,
-    - PDF documents,
-    - Plain text.
-    """
-    )
-    st.markdown("""
-    Additionally, OliveFarm features a collection of pre-existing templates, powered by ChatGPT,
-        to streamline the process of generating instruction sets. Experience the future of Indic 
-    language instruction with OliveFarm!
 
-    Contributors:
-    - AR Kamaldeen (KIIT University, India)
-    - SK Shahid (Silicon Institute of Technology, India)
-    - Sambit Sekhar (Odia Generative AI, India)
-    - Dr. Shantipriya Parida (Silo AI, Finland)  
-        
-    """)
-    st.write("#")
     st.markdown(
     """
-    <style>
-    .center-text {
-        text-align: center;
-    }
-    </style>
-    <div class="center-text">
-        © 2023 Odia Generative AI
-    </div>
+        <style>
+            .copyright {
+                text-align: center;
+                font-size: 14px;
+            }
+        </style>
+        <div class="copyright">
+            © 2023 Odia Generative AI
+        </div>
     """
     , unsafe_allow_html=True)
 
@@ -340,35 +345,37 @@ def main():
                 - You must return the response in the specified language.
                 - Each generated instruction can be either an imperative sentence or a question.
                 """
-
-                if st.button("Generate Instructions"):
-                    prompt = my_prompt_template.format(
-                        num_questions=noOfQuestions, 
-                        context=extractedData, 
-                        instruction_format=instructionFormat, 
-                        lang=language, 
-                        additional_rules=additional_rules
-                    )
-                    response = openai.ChatCompletion.create(
-                        model="gpt-3.5-turbo",
-                        messages=[
-                                {"role": "system", "content": prompt},
-                            ])
-                # if st.button("Generate Instructions"):
-                    print("Generate button")
-                    print("Checkpoint 1!")
-                    
-                    if "result" not in st.session_state:
-                        content = response.choices[0].message.content
-                        # content = "\n1. helloworld1.\n2. helloworld2"
-                        responses_list = content.split('\n')
-                        responses_list = [re.sub(r'^\s*\d+\.\s*', '', resp) for resp in responses_list if resp]
-                        st.session_state["result"]=responses_list
-                        st.session_state.generated = True
-                    st.session_state.Initial = False
+                try :
+                    if st.button("Generate Instructions"):
+                        prompt = my_prompt_template.format(
+                            num_questions=noOfQuestions, 
+                            context=extractedData, 
+                            instruction_format=instructionFormat, 
+                            lang=language, 
+                            additional_rules=additional_rules
+                        )
+                        response = openai.ChatCompletion.create(
+                            model="gpt-3.5-turbo",
+                            messages=[
+                                    {"role": "system", "content": prompt},
+                                ])
+                    # if st.button("Generate Instructions"):
+                        print("Generate button")
+                        print("Checkpoint 1!")
+                        
+                        if "result" not in st.session_state:
+                            content = response.choices[0].message.content
+                            # content = "\n1. helloworld1.\n2. helloworld2"
+                            responses_list = content.split('\n')
+                            responses_list = [re.sub(r'^\s*\d+\.\s*', '', resp) for resp in responses_list if resp]
+                            st.session_state["result"]=responses_list
+                            st.session_state.generated = True
+                        st.session_state.Initial = False
+                except Exception as err:
+                    st.error(err)
             if st.session_state.generated:
                 # displaying the generated instructions
-                st.write("Generated Insuctions")
+                st.write("Generated Instructions")
                 result = st.session_state["result"]
                 # print(type(result))
                 # print(result)
@@ -410,40 +417,42 @@ def main():
                     """
                    
                     question =  st.session_state["selected_items"]
-                    if st.button("Generate Answers"):
-                        prompt = my_prompt_template2.format(
-                               questions=question,
-                               additional_rules = additional_rules
-                        )
-                        response = openai.ChatCompletion.create(
-                            model="gpt-3.5-turbo",
-                            messages=[
-                                    {"role": "system", "content": prompt},
-                                ])
+                    try:
+                        if st.button("Generate Answers"):
+                            prompt = my_prompt_template2.format(
+                                    questions=question,
+                                    additional_rules = additional_rules
+                            )
+                            response = openai.ChatCompletion.create(
+                                model="gpt-3.5-turbo",
+                                messages=[
+                                        {"role": "system", "content": prompt},
+                                    ])
 
-                    # if st.button("Generate Answers"):
-                        # print("\n\n\n\nInside Answersss:\n\n\n\n")
-                        # print(st.session_state["selected_items"])
-                        
-                        # print("Generate button")
-                        # print("Checkpoint 3!")
+                        # if st.button("Generate Answers"):
+                            # print("\n\n\n\nInside Answersss:\n\n\n\n")
+                            # print(st.session_state["selected_items"])
+                            
+                            # print("Generate button")
+                            # print("Checkpoint 3!")
 
-                        if "answers" not in st.session_state:
-                            content = response.choices[0].message.content
-                            # content = "\n1. Answer1.\n2. Answer2"
-                            print("\n\n\n\n\nAnswerss before regex\n\n\n\n")
-                            print(content)
-                            # print("Answer Type:" + str(type(content)))
-                            responses_list = content.split('\n')
-                            # print("\n\n\n\n\nAnswerss before regex after splitting\n\n\n\n")
-                            # print(responses_list)
-                            # print("Answer Type:" + str(type(responses_list)))
+                            if "answers" not in st.session_state:
+                                content = response.choices[0].message.content
+                                # content = "\n1. Answer1.\n2. Answer2"
+                                print("\n\n\n\n\nAnswerss before regex\n\n\n\n")
+                                print(content)
+                                # print("Answer Type:" + str(type(content)))
+                                responses_list = content.split('\n')
+                                # print("\n\n\n\n\nAnswerss before regex after splitting\n\n\n\n")
+                                # print(responses_list)
+                                # print("Answer Type:" + str(type(responses_list)))
 
-                            responses_list = [re.sub(r'^\s*\d+\.\s*', '', resp) for resp in responses_list if resp]
-                            st.session_state["answers"]=responses_list
-                            st.session_state.answered = True
-                        st.session_state.Initial2 = False
-                
+                                responses_list = [re.sub(r'^\s*\d+\.\s*', '', resp) for resp in responses_list if resp]
+                                st.session_state["answers"]=responses_list
+                                st.session_state.answered = True
+                            st.session_state.Initial2 = False
+                    except Exception as e:
+                        st.error(e)
                 if st.session_state.answered:
                     # displaying the generated Answers
                     
@@ -457,12 +466,12 @@ def main():
                     # print(answers_dict)
                     # print("Checked point 4!")
                     # st.write("answers")
-                    st.write(answers_dict)
+                    # st.write(answers_dict)
 
                     # Create a list to hold the JSON-like data
                     st.write("Generated Questions and Answers")
                     # Create a list of dictionaries
-                    jsonl_data = [{"Question": question, "Answer": answers_dict.get(i, 'No answer found')} for i, question in enumerate(questions, start=1)]
+                    jsonl_data = [{"Instruction": question, "Output": answers_dict.get(i, 'No answer found'), "Input":""} for i, question in enumerate(questions, start=1)]
                     
                 
                     st.write(jsonl_data)
@@ -500,7 +509,7 @@ def main():
                 del st.session_state["result"]  
             if "selected_items" in  st.session_state:
                 del st.session_state["selected_items"]  
-            if "answered" in  st.session_state:
+            if "answers" in  st.session_state:
                 del st.session_state["answers"]  
             st.experimental_rerun()
 
