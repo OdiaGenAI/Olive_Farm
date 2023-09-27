@@ -245,7 +245,7 @@ def main():
         )
 
         # input text for openAiKey
-        openAiKey = st.text_input(label="Input the openai key")
+        openAiKey = st.text_input(label="Input the openai key", type="password")
         if "openAiKey" in  st.session_state:
             st.session_state["openAiKey"]  = openAiKey
         else:
@@ -413,7 +413,7 @@ def main():
 
                      # providing the rules for the answers to be generated
                     additional_rules = """
-                        Enumerate the answers and dont provide any additional tags.
+                        provide only the answers as paragraphs by numbering it accordingly without providing questions and additional tags
                     """
                    
                     question =  st.session_state["selected_items"]
