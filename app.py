@@ -42,13 +42,6 @@ with st.sidebar:
     It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages.
     Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate additional
     languages on the horizon.""")
-    st.markdown('''
-    <style>
-    [data-testid="stMarkdownContainer"] ul{
-        padding-left:40px;
-    }
-    </style>
-    ''', unsafe_allow_html=True)
     st.markdown(
     """
     This versatile tool accommodates inputs from a variety of sources, including:
