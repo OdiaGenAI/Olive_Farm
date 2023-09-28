@@ -43,7 +43,8 @@ with st.sidebar:
            
         </style>
         <div class="sidebar-text">
-            OliveFarm is a cutting-edge web application crafted by the innovative minds at OdiaGenAI. 
+            OliveFarm is a cutting-edge web application crafted by the innovative minds at 
+            <a href="https://www.odiagenai.org/" target="_blank">OdiaGenAI.</a>
             It's designed to effortlessly generate LLM (Language Model) instruction sets in Indic languages. 
             Presently, it offers support for Hindi and Odia, with seamless scalability to incorporate 
             additional languages on the horizon.
@@ -55,6 +56,11 @@ with st.sidebar:
             Additionally, OliveFarm features a collection of pre-existing templates, powered by ChatGPT, 
             to streamline the process of generating instruction sets. Experience the future of 
             Indic language instruction with OliveFarm!
+        </div>
+        <div>
+            Please follow the  
+            <a href="https://github.com/OdiaGenAI/Olive_Farm/blob/main/README.md" target="_blank">GitHub README</a>
+            instructions to generate the instruction set.
         </div>
         <div class="sidebar-text">
             Contributors:
