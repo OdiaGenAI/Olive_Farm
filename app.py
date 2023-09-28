@@ -69,6 +69,7 @@ with st.sidebar:
             <li class="list">AR Kamaldeen</li>
             <li class="list">SK Shahid</li>
             <li class="list">Sambit Sekhar</li>
+            <li class="list">Parul Agarwal</li>
             <li class="list">Dr. Shantipriya Parida</li>
         </ul>
     """, unsafe_allow_html=True)
