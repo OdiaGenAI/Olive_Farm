@@ -21,6 +21,7 @@ Contributors:
 * AR Kamaldeen (KIIT University, India)
 * SK Shahid (Silicon Institute of Technology, India)
 * Sambit Sekhar (Odia Generative AI, India)
+* Parul Agarwal (Institute of Mathematics, India)
 * Dr. Shantipriya Parida (Silo AI, Finland)
 
 
