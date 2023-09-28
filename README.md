@@ -21,7 +21,21 @@ Contributors:
 * AR Kamaldeen (KIIT University, India)
 * SK Shahid (Silicon Institute of Technology, India)
 * Sambit Sekhar (Odia Generative AI, India)
-* Dr. Shantipriya Parida (Silo AI, Finland)     
+* Dr. Shantipriya Parida (Silo AI, Finland)
+
+
+Steps to generate an instruction set.
+1) Select the language.
+2) Select the input content type.
+3) Select the number of questions to generate.
+4) Select the format of instruction.
+5) Provide your OpenAI key and submit.
+6) Based on the input content type, input the Text/URL/PDF and submit.
+7) Click on “Generate Instructions”, which will generate the number of questions selected in Step 3.
+8) Select the questions by clicking on the checkboxes and click on “Generate Answers” which will generate the answers.
+9) Save the instruction set (questions and answers) by clicking on the “Save as jsonl” button which will save the instruction set. and make sure to rename the file to .jsonl while saving 
+10)The instruction set will be saved in the system.
+11)After Each generation set click on clear to format the data
 
 
 Citation:
