@@ -45,7 +45,7 @@ If you find this repository useful, please consider giving ⭐ and citing:
 
 ```
 @misc{Olivefarm,
-  author = {AR Kamaldeen and SK Shahid and Sambit Sekhar and Shantipriya Parida},
+  author = {AR Kamaldeen and SK Shahid and Sambit Sekhar and Parul Agarwal Shantipriya Parida},
   title = {Olive Farm: WebAPP for Indic Instruction Set Generation},
   year = {2023},
   publisher = {GitHub},
