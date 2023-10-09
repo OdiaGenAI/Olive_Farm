@@ -1,0 +1,10 @@
+user_role_list = ['AI Researcher', 'Accountant', 'Actor', 'Actress', 'Archaeologist', 'Archivist', 'Architect', 'Artist', 'Astronomer',
+                  'Athlete', 'Author', 'Barista', 'Bartender', 'Biologist', 'Biomedical Engineer', 'Blogger', 'CEO', 'Carpenter', 'Cartoonist',
+                  'Chef', 'Chauffeur', 'Counselor', 'Customer', 'DJ', 'Dancer', 'Data Analyst', 'Dentist', 'Designer', 'Director', 'Doctor', 'Electrician',
+                  'Engineer', 'Entrepreneur', 'Environmentalist', 'Ethical Hacker', 'Event Planner', 'Explorer', 'Farmer', 'Fashion Model', 'Financial Analyst',
+                  'Firefighter', 'Fitness Coach', 'Florist', 'Gamer', 'Geologist', 'Graphic Designer', 'Hair Stylist', 'Historian', 'Housekeeper', 'Illustrator',
+                  'Lawyer', 'Librarian', 'Magician', 'Magistrate', 'Makeup Artist', 'Manager', 'Mechanic', 'Meteorologist', 'Musician', 'News Reporter', 'Novelist',
+                  'Nurse', 'Nutritionist', 'Parent', 'Personal Trainer', 'Pharmacist', 'Philanthropist', 'Philosopher', 'Photographer', 'Pilot', 'Plumber', 'Poet',
+                  'Police Officer', 'Producer', 'Psychologist', 'Real Estate Agent', 'Receptionist', 'Researcher', 'Salesperson', 'Scientist', 'Superintendent', 'Security guard',
+                  'Social Media Influencer', 'Social Worker', 'Software Engineer', 'Sommelier', 'Student', 'Taxi Driver', 'Teacher', 'Therapist', 'Tour Guide', 'Translator',
+                  'Traveler', 'Veterinarian', 'Waiter', 'Web Developer', 'Wedding Planner', 'Writer', 'Yoga Instructor', 'Zoologist']
