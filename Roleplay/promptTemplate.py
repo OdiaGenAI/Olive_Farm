@@ -36,6 +36,7 @@ def conversation_generator(user,assistant, task, chat_limit=2):
     print(task)
     print(user)
     print(assistant)
+    print(chat_limit)
     role_play_session = RolePlaying(assistant, user, task_prompt)
     # print(Fore.CYAN + f"Specified task prompt:\n{role_play_session.task_prompt}\n")
     # print(f"Specified task prompt:\n{role_play_session.task_prompt}\n")
