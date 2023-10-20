@@ -3,4 +3,4 @@ pdfplumber
 docx2txt
 justext
 openai
-langchain
+langchain==0.0.310
